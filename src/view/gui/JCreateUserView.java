@@ -1,5 +1,6 @@
 package view.gui;
 
+import controller.gui.JControllerImpl;
 import controller.gui.JUserController;
 
 /**
@@ -9,9 +10,9 @@ public interface JCreateUserView {
   /**
    * Method to link the view to controller.
    *
-   * @param jUserController controller for create user menu.
+   * @param jControllerImpl controller for create user menu.
    */
-  void addFeatures(JUserController jUserController);
+  void addFeatures(JControllerImpl jControllerImpl);
 
   /**
    * Method to clear the user inputs.

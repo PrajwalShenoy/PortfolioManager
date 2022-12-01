@@ -1,6 +1,6 @@
 package view.gui;
 
-import controller.gui.JPortfolioController;
+import controller.gui.JController;
 
 /**
  * This is a view interface for main portfolio menu.
@@ -9,9 +9,9 @@ public interface JPortfolioMenuView {
   /**
    * Method to link the view to controller.
    *
-   * @param jPortfolioMenu controller for portfolio menu.
+   * @param jController controller for portfolio menu.
    */
-  void addFeatures(JPortfolioController jPortfolioMenu);
+  void addFeatures(JController jController);
 
   /**
    * Method to set the visibility of a view.

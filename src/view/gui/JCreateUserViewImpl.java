@@ -17,6 +17,7 @@ import javax.swing.JFileChooser;
 import javax.swing.BorderFactory;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import controller.gui.JControllerImpl;
 import controller.gui.JUserController;
 
 /**
@@ -160,11 +161,11 @@ public class JCreateUserViewImpl extends JFrame implements JCreateUserView, Acti
   }
 
   @Override
-  public void addFeatures(JUserController jUserController) {
-    loginButton.addActionListener(evt -> jUserController.loginUser(userId.getText()));
-    createUserButton.addActionListener(evt -> jUserController.createUser(firstName.getText(),
+  public void addFeatures(JControllerImpl jControllerImpl) {
+    loginButton.addActionListener(evt -> jControllerImpl.loginUser(userId.getText()));
+    createUserButton.addActionListener(evt -> jControllerImpl.createUser(firstName.getText(),
             lastName.getText()));
-    loadUserButton.addActionListener(evt -> jUserController.loadUser(filePathLabel.getText()));
+    loadUserButton.addActionListener(evt -> jControllerImpl.loadUser(filePathLabel.getText()));
   }
 
   @Override

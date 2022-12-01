@@ -10,7 +10,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import javax.swing.BoxLayout;
 
-import controller.gui.JPortfolioController;
+import controller.gui.JController;
 
 /**
  * This class implements the JPortfolioMenuView interface and contains the methods to help display
@@ -193,16 +193,16 @@ public class JPortfolioMenuViewImpl extends JFrame implements JPortfolioMenuView
   }
 
   @Override
-  public void addFeatures(JPortfolioController jPortfolioMenu) {
-    backButton.addActionListener(evt -> jPortfolioMenu.back());
-    viewPortfolioButton.addActionListener(evt -> jPortfolioMenu.viewPortfolio());
-    performancePortfolioButton.addActionListener(evt -> jPortfolioMenu.performanceOfPortfolio());
-    loadPortfolioButton.addActionListener(evt -> jPortfolioMenu.loadPortfolio());
-    costBasisOfPortfolioButton.addActionListener(evt -> jPortfolioMenu.costBasisPortfolio());
-    createPortfolioButton.addActionListener(evt -> jPortfolioMenu.createPortfolio());
-    transactInPortfolioButton.addActionListener(evt -> jPortfolioMenu.transactInPortfolio());
-    valuatePortfolioButton.addActionListener(evt -> jPortfolioMenu.valueOfPortfolio());
-    setCommissionButton.addActionListener(evt -> jPortfolioMenu.setCommission());
+  public void addFeatures(JController jController) {
+    backButton.addActionListener(evt -> jController.portfolioMenuBack());
+    viewPortfolioButton.addActionListener(evt -> jController.viewPortfolio());
+    performancePortfolioButton.addActionListener(evt -> jController.performanceOfPortfolio());
+    loadPortfolioButton.addActionListener(evt -> jController.loadPortfolio());
+    costBasisOfPortfolioButton.addActionListener(evt -> jController.costBasisPortfolio());
+    createPortfolioButton.addActionListener(evt -> jController.createPortfolio());
+    transactInPortfolioButton.addActionListener(evt -> jController.transactInPortfolio());
+    valuatePortfolioButton.addActionListener(evt -> jController.valueOfPortfolio());
+    setCommissionButton.addActionListener(evt -> jController.setCommission());
   }
 
   @Override
